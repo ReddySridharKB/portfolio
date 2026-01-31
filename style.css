@@ -28,7 +28,7 @@ body {
 .logo {
   font-size: 25px;
   font-weight: 600;
-  color: #366efd;
+  color: #00e5ff;
 }
 html {
   scroll-behavior: smooth;
@@ -379,5 +379,83 @@ section:target .section-title {
   /* TITLES */
   .section-title {
     font-size: 22px !important;
+  }
+}
+/* SKILLS SECTION */
+.skills {
+  padding: 80px 20px;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  align-items: start; /* KEY */
+}
+
+.skills-card {
+  background: rgba(255,255,255,0.05);
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(6px);
+  height: auto; /* KEY */
+}
+
+.skills-card h3 {
+  margin-bottom: 20px;
+  color: #38bdf8;
+}
+
+/* TECH SKILLS */
+.skill {
+  margin-bottom: 18px;
+}
+
+.skill-head {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.bar {
+  background: rgba(255,255,255,0.15);
+  height: 10px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background: linear-gradient(90deg, #38bdf8, #366efd);
+  border-radius: 6px;
+}
+
+/* WIDTHS */
+.html { width: 80%; }
+.css { width: 60%; }
+.java { width: 40%; }
+.sql { width: 30%; }
+.spring { width: 3%; }
+.cloud { width: 3%; }
+.devops { width: 3%; }
+
+/* SOFT + TOOLS */
+.soft-list {
+  list-style: none;
+  color: #cbd5f5;
+  font-size: 15px;
+  line-height: 2;
+}
+
+.soft-list li {
+  margin-bottom: 8px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .skills {
+    padding: 40px 15px;
   }
 }
