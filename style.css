@@ -28,7 +28,7 @@ body {
 .logo {
   font-size: 25px;
   font-weight: 600;
-  color: #00e5ff;
+  color: #008cff;
 }
 html {
   scroll-behavior: smooth;
@@ -473,4 +473,79 @@ section:target .section-title {
   .skills-inner-grid {
     grid-template-columns: 1fr;
   }
+}
+/* PROJECTS */
+.projects {
+  padding: 80px 20px;
+}
+
+.projects-grid {
+  max-width: 1200px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  overflow: hidden;
+  backdrop-filter: blur(8px);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(56, 189, 248, 0.2);
+}
+
+.project-img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+}
+
+.project-content {
+  padding: 22px;
+}
+
+.project-content h3 {
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.project-content p {
+  color: #cbd5f5;
+  line-height: 1.6;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+/* Tags */
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.project-tags span {
+  font-size: 13px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  color: #38bdf8;
+}
+
+/* Buttons */
+.project-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
 }
