@@ -2,13 +2,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 body {
   min-height: 100vh;
   color: #e5e7eb;
-  background: linear-gradient(135deg, #0a133a 0%, #0a1634 40%, #01092a 100%);
+  background: linear-gradient(135deg, #122b97 7%, #0a1634 50%,  #122b97 100%);
   padding: 10px;
 }
 
@@ -155,12 +155,12 @@ h3{
    box-shadow: 0 8px 20px rgba(62, 56, 248, 0.35);
 }
 .hero-image img {
-  width: 350px;
-  height: 370px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid #38b8f8;
-  box-shadow: 0 0 40px rgb(17, 149, 243);
+  border: 4px solid #00ffe1;
+  box-shadow: 0 0 40px rgb(0, 234, 255);
   
 }
 
@@ -386,20 +386,31 @@ section:target .section-title {
   padding: 80px 20px;
 }
 
-.skills-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  align-items: start; /* KEY */
+/* BIG OUTER CARD */
+.skills-main-card {
+  max-width: 1100px;
+  margin: auto;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 35px;
+  backdrop-filter: blur(8px);
 }
 
+/* INNER GRID */
+.skills-inner-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 25px;
+  align-items: start;
+}
+
+/* SMALL INNER CARDS */
 .skills-card {
   background: rgba(255,255,255,0.05);
   padding: 25px;
   border-radius: 12px;
   border: 1px solid rgba(255,255,255,0.08);
-  backdrop-filter: blur(6px);
-  height: auto; /* KEY */
 }
 
 .skills-card h3 {
@@ -416,7 +427,7 @@ section:target .section-title {
   display: flex;
   justify-content: space-between;
   font-size: 14px;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
 }
 
 .bar {
@@ -441,7 +452,7 @@ section:target .section-title {
 .cloud { width: 3%; }
 .devops { width: 3%; }
 
-/* SOFT + TOOLS */
+/* LISTS */
 .soft-list {
   list-style: none;
   color: #cbd5f5;
@@ -450,12 +461,16 @@ section:target .section-title {
 }
 
 .soft-list li {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 /* MOBILE */
-@media (max-width: 768px) {
-  .skills {
-    padding: 40px 15px;
+@media (max-width: 900px) {
+  .skills-main-card {
+    padding: 20px;
+  }
+
+  .skills-inner-grid {
+    grid-template-columns: 1fr;
   }
 }
